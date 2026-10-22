@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYNC — Seek your next companion</title>
+  <meta name="description" content="SYNC connects people through shared taste — artists, music, creators and hobbies — suggesting events to invite/share with your next companion." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet (edit styles.css in Dreamweaver) -->
+  <link rel="stylesheet" href="file:///Macintosh HD/Users/robertsharpe/Desktop/sync code /styles.css" />
+</head>
+<body>
+
+  <!-- ===== Ambient background glow ===== -->
+  <div class="ambient" aria-hidden="true">
+    <span class="blob blob-pink"></span>
+    <span class="blob blob-cyan"></span>
+    <span class="blob blob-purple"></span>
+  </div>
+
+  <!-- ===== Top navigation ===== -->
+  <header class="site-header">
+    <a class="logo" href="#top">
+      <span class="logo-mark">
+        <span class="logo-glow"></span>
+        <img src="https://customer-assets-m6fa6gv7.emergentagent.net/job_app-or-website-1/artifacts/16189c7c60530e33_IMG_0695.png" alt="SYNC logo" />
+      </span>
+      <span class="logo-word">SYNC</span>
+    </a>
+    <nav class="nav-actions">
+      <button class="btn btn-ghost" onclick="openAuth('login')">Log in</button>
+      <button class="btn btn-gradient" onclick="openAuth('register')">Join the pilot</button>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero-logo">
+        <span class="hero-logo-glow"></span>
+        <img src="https://customer-assets-m6fa6gv7.emergentagent.net/job_app-or-website-1/artifacts/16189c7c60530e33_IMG_0695.png" alt="SYNC logo" />
+      </div>
+
+      <!-- Audio waveform -->
+      <div class="waveform" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <p class="eyebrow">Dublin Pilot · Synthetic prototype</p>
+      <h1 class="hero-title">Seek your next <span class="grad-text">companion</span></h1>
+      <p class="hero-sub">
+        SYNC connects people through shared taste — artists, music, creators and hobbies — suggesting events to invite/share with your next companion. No scores, just real common ground.
+      </p>
+
+      <div class="hero-cta">
+        <button class="btn btn-gradient btn-lg" onclick="openAuth('register')">
+          Join now
+          <svg data-icon="arrow-right"></svg>
+        </button>
+        <button class="btn btn-outline btn-lg" onclick="alert('This is a static Dreamweaver mockup — demo mode is available in the full app.')">
+          Explore as demo member
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== Pillars ===== -->
+    <section class="pillars">
+      <article class="pillar">
+        <div class="pillar-icon"><svg data-icon="music"></svg></div>
+        <h3>Music</h3>
+        <p>Bond over shared artists, gigs and local line-ups.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon"><svg data-icon="heart"></svg></div>
+        <h3>Dating</h3>
+        <p>Chemistry rooted in genuine, mutual culture.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon"><svg data-icon="users"></svg></div>
+        <h3>Friends</h3>
+        <p>Grow your circle of gig buddies and event crew.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon"><svg data-icon="calendar"></svg></div>
+        <h3>Events</h3>
+        <p>Discover live gigs, festivals, comedy and sport.</p>
+      </article>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section class="how">
+      <p class="eyebrow pink">How SYNC works</p>
+      <h2 class="section-title">Plain language, never a score</h2>
+      <div class="how-grid">
+        <article class="how-card">
+          <svg data-icon="sparkles" class="how-icon"></svg>
+          <h3>Pick what you love</h3>
+          <p>Choose artists, genres, creators and hobbies — or import them from your music apps.</p>
+        </article>
+        <article class="how-card">
+          <svg data-icon="message-circle" class="how-icon"></svg>
+          <h3>Match on real overlap</h3>
+          <p>We explain exactly what you share: “You both love Fontaines D.C. and techno.” Message only after a mutual match.</p>
+        </article>
+        <article class="how-card">
+          <svg data-icon="shield-check" class="how-icon"></svg>
+          <h3>Stay safe by design</h3>
+          <p>Block, report, unmatch and appeal are everywhere. Every report is actioned within 24 hours.</p>
+        </article>
+      </div>
+    </section>
+    <!-- ===== Connect your music (simulated) ===== -->
+    <section class="music" id="music">
+      <p class="eyebrow">Bring your taste with you</p>
+      <h2 class="section-title">Connect your music apps</h2>
+      <p class="music-sub">Import your top artists and playlists as interests. We'll show the artists and genres you share with every match.</p>
+      <div class="music-grid">
+        <div class="music-tile" data-platform="Spotify">
+          <span class="music-dot" style="background:#1DB954"><svg data-icon="music-2"></svg></span>
+          <span class="music-name">Spotify</span>
+          <button class="btn btn-outline music-btn" onclick="connectMusic(this)">Connect</button>
+        </div>
+        <div class="music-tile" data-platform="Apple Music">
+          <span class="music-dot" style="background:#FA2D48"><svg data-icon="music-2"></svg></span>
+          <span class="music-name">Apple Music</span>
+          <button class="btn btn-outline music-btn" onclick="connectMusic(this)">Connect</button>
+        </div>
+        <div class="music-tile" data-platform="iTunes">
+          <span class="music-dot" style="background:#EA4CC0"><svg data-icon="music-2"></svg></span>
+          <span class="music-name">iTunes</span>
+          <button class="btn btn-outline music-btn" onclick="connectMusic(this)">Connect</button>
+        </div>
+        <div class="music-tile" data-platform="YouTube">
+          <span class="music-dot" style="background:#FF0000"><svg data-icon="music-2"></svg></span>
+          <span class="music-name">YouTube</span>
+          <button class="btn btn-outline music-btn" onclick="connectMusic(this)">Connect</button>
+        </div>
+      </div>
+      <p class="music-note">&nbsp;</p>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <span class="synthetic-pill">
+      <svg 
+    </span>
+    <p>SYNC · Seek Your Next Companion · 18+ only</p>
+  </footer>
+
+  <!-- ===== Auth + age-gate dialog (static) ===== -->
+  <div class="modal-overlay" id="authModal" onclick="closeAuthOutside(event)">
+    <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" onclick="closeAuth()" aria-label="Close">&times;</button>
+      <div class="modal-logo">
+        <span class="logo-glow"></span>
+        <img src="https://customer-assets-m6fa6gv7.emergentagent.net/job_app-or-website-1/artifacts/16189c7c60530e33_IMG_0695.png" alt="SYNC logo" />
+      </div>
+      <h2 id="authTitle" class="modal-title">Welcome to SYNC</h2>
+      <p class="modal-sub">Seek your next companion in Dublin</p>
+
+      <div class="tabs">
+        <button class="tab" id="tab-register" onclick="switchTab('register')">Sign up</button>
+        <button class="tab" id="tab-login" onclick="switchTab('login')">Log in</button>
+      </div>
+
+      <form class="auth-form" onsubmit="fakeSubmit(event)">
+        <label>Email
+          <input type="email" placeholder="you@example.com" required />
+        </label>
+        <label>Password
+          <input type="password" placeholder="••••••••" required />
+        </label>
+        <label class="dob-field" id="dobField">
+          <span class="dob-label">Date of birth
+            <span class="age-gate-tag">Synthetic age gate</span>
+          </span>
+          <input type="date" />
+          <small>You must be 18 or older. This is a labelled placeholder check — no real ID provider in the prototype.</small>
+        </label>
+        <button type="submit" class="btn btn-gradient btn-block" id="authSubmit">Create account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lucide icons via CDN (swap for your own SVGs in Dreamweaver if preferred) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Page behaviour (edit script.js in Dreamweaver) -->
+  <script src="file:///Macintosh HD/Users/robertsharpe/Desktop/sync code /script.js"></script>
+</body>
+</html>
